@@ -1,0 +1,7 @@
+<h2>ポケモン図鑑</h2>
+
+<ul>
+  <li *ngFor="let pokemon of pokemondata">
+  <a routerLink="/pokemon-data/{{pokemon.id}}">{{pokemon.name}}</a>
+  </li>
+</ul>
