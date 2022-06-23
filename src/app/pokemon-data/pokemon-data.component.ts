@@ -17,8 +17,7 @@ export class PokemonDataComponent implements OnInit {
 
   ngOnInit(): void {
     this.pokemonid = this.route.snapshot.paramMap.get('id') as string;
-    // this.pokemon= POKEMONDATA.find(pokemon=>pokemon.id.toString()==this.pokemonid);
-    // console.log(pokemon=>pokemon.id.toString)
+    this.pokemon = POKEMONDATA.find(pokemon=>pokemon.id.toString()==this.pokemonid) as Pokemon
   }
 
   backToList(){this.location.back();

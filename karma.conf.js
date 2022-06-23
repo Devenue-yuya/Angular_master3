@@ -25,7 +25,7 @@ module.exports = function (config) {
       suppressAll: true // removes the duplicated traces
     },
     coverageReporter: {
-      dir: require('path').join(__dirname, './coverage/pokemon_picture_book'),
+      dir: require('path').join(__dirname, './coverage/angular-master3'),
       subdir: '.',
       reporters: [
         { type: 'html' },

@@ -1,19 +1,13 @@
 {
   "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
-  "cli": {
-    "analytics": false
-  },
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "pokemon_picture_book": {
+    "Angular_master3": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
           "style": "sass"
-        },
-        "@schematics/angular:application": {
-          "strict": true
         }
       },
       "root": "",
@@ -23,7 +17,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/pokemon_picture_book",
+            "outputPath": "dist/angular-master3",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -75,10 +69,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "pokemon_picture_book:build:production"
+              "browserTarget": "Angular_master3:build:production"
             },
             "development": {
-              "browserTarget": "pokemon_picture_book:build:development"
+              "browserTarget": "Angular_master3:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -86,7 +80,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "pokemon_picture_book:build"
+            "browserTarget": "Angular_master3:build"
           }
         },
         "test": {
@@ -110,5 +104,7 @@
       }
     }
   },
-  "defaultProject": "pokemon_picture_book"
+  "cli": {
+    "analytics": false
+  }
 }
