@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import {ActivatedRoute} from '@angular/router';
 import {Location} from '@angular/common';
 import {Pokemon} from '../pokemon/pokemon';
-import {POKEMONDATA} from '../pokemon/pokemondata';
+import { PokemonService } from '../pokemon.service';
 
 @Component({
   selector: 'app-pokemon-data',
@@ -12,15 +12,14 @@ import {POKEMONDATA} from '../pokemon/pokemondata';
 export class PokemonDataComponent implements OnInit {
   pokemonid :string;
   pokemon !:Pokemon;
-  constructor(private route:ActivatedRoute, private location:Location) {
+  constructor(private route:ActivatedRoute, private location:Location,private psv: PokemonService) {
   this.pokemonid = ""; }
 
   ngOnInit(): void {
     this.pokemonid = this.route.snapshot.paramMap.get('id') as string;
-    this.pokemon = POKEMONDATA.find(pokemon=>pokemon.id.toString()==this.pokemonid) as Pokemon
+    this.pokemon = this.psv.getPokemon(this.pokemonid);
   }
 
   backToList(){this.location.back();
   }
  }
-console.log(Pokemon)

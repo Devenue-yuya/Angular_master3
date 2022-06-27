@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { POKEMONDATA } from '../pokemon/pokemondata';
+import {Pokemon} from '../pokemon/pokemon';
+import { PokemonService } from '../pokemon.service';
 
 @Component({
   selector: 'app-pokemon-list',
@@ -7,11 +8,20 @@ import { POKEMONDATA } from '../pokemon/pokemondata';
   styleUrls: ['./pokemon-list.component.sass']
 })
 export class PokemonListComponent implements OnInit {
-  pokemondata=POKEMONDATA;
+  pokemondata!:Pokemon[];
 
-  constructor() { }
+  constructor(private psv: PokemonService) { }
 
   ngOnInit(): void {
+    this.pokemondata = this.psv.getPokemondata();
+  }
+   searchPokemon(keyword:string){
+     this.pokemondata = this.psv.searchPokemon(keyword);
+     this.psv.currentValue = keyword;
+  }
+
+  getCurrentValue(){
+    return this.psv.currentValue;
   }
 
 }

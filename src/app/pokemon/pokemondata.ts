@@ -1,33 +1,33 @@
 import { Pokemon } from './pokemon';
 export const POKEMONDATA: Pokemon[] = [
   {
-    id: "1",
+    id: "001",
     name: "フシギバナ",
-    type: "くさ・どく",
+    type: "タイプ:くさ・どく",
     feature: "特性：しんりょく",
   },
   {
-    id: "2",
+    id: "002",
     name: "リザードン",
-    type: "ほのお・ひこう",
+    type: "タイプ：ほのお・ひこう",
     feature: "特性：もうか",
   },
   {
-    id: "3",
+    id: "003",
     name: "カメックス",
-    type: "みず",
+    type: "タイプ：みず",
     feature: "特性：げきりゅう",
   },
   {
-    id: "4",
+    id: "004",
     name: "ピカチュウ",
-    type: "でんき",
+    type: "タイプ：でんき",
     feature: "特性：せいでんき",
   },
   {
-    id: "5",
+    id: "005",
     name: "カビゴン",
-    type: "ノーマル",
+    type: "タイプ：ノーマル",
     feature: "特性：あついしぼう",
   },
 ]
